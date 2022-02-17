@@ -1,43 +1,89 @@
-document.getElementById('calculate-button').addEventListener('click', function(){
-    //income 
-    const incomeInput = document.getElementById('income-input');
-    const incomeAmount = incomeInput.value;
-    
-    // const newicomeAmount = parseFloat(incomeAmount);
-    // console.log(newicomeAmount);
+//Income function
+function myIncome(){
 
-    //food
+    const MyincomeInput = document.getElementById('income-input');
+    const MyincomeAmount = MyincomeInput.value;
+
+    return parseFloat(MyincomeAmount);
+}
+
+//Expenses function
+function expenses(){
+
+    // if (foodAmount < 0){
+    //     window.alert("Hello world!");
+        
+    // }
+
+    //food Cost
     const foodInput = document.getElementById('foodcost-input');
     const foodAmount = foodInput.value;
-    // const newfoodAmount = parseFloat(foodAmount);
-    // console.log(newfoodAmount);
+
+   
     
-    //rentcost
+    //Rentcost
     const rentInput = document.getElementById('rentcost-input');
     const rentAmount = rentInput.value;
-    // const newrentAmount= parseFloat(rentAmount);
-
-    // console.log(newrentAmount);
-    
+   
     //clothcost
     const clothInput = document.getElementById('clothcost-input');
     const clothAmount = clothInput.value;
-    // const newclothAmount = parseFloat(clothAmount);
-    // console.log(newclothAmount);
 
-    // const expenses = newfoodAmount+newrentAmount+newclothAmount;
+
+    //total exprenses cost
     const expenses =parseFloat(foodAmount)+parseFloat(rentAmount)+parseFloat(clothAmount);
     const totalExpenses = document.getElementById('total-expneses');
     totalExpenses.innerText=expenses;
+    return parseFloat(expenses);
 
-   
-
-
-    const balance = parseFloat(incomeAmount)-parseFloat(expenses);
-    const totalbalance = document.getElementById('balance');
-    totalbalance.innerText=balance;
-
-   
+    
+}
 
 
-});
+    function mybalance(num1,num2 ){
+        const totalAmountBalance=num1-num2;
+        const mybalance= document.getElementById('balance');
+        mybalance.innerText=totalAmountBalance;
+        return parseFloat (totalAmountBalance);
+    }
+
+    //savsings amount
+
+    function mysavingsBalance(num3){
+        const inputsaving= document.getElementById('save-input');
+        const inputsavingText = inputsaving.value;
+        let TotalSaving =parseFloat(inputsavingText);
+        let savingBalance = (num3*TotalSaving)/100;
+        let savingAmount= document.getElementById('saving-amount');
+        savingAmount.innerText=savingBalance;
+        return parseFloat(savingBalance);
+    }
+
+    function RemainingBalance(num4,num5){
+        const remaBalance = num4-num5;
+        const remaAmount = document.getElementById('remaining-amount');
+        remaAmount.innerText=remaBalance;
+    }
+
+    //call function 
+    document.getElementById('calculate-button').addEventListener('click',function(){
+        let myincome= myIncome();
+        let myexprenses= expenses();
+        let myBalance = mybalance(myincome,myexprenses);
+
+
+        //call function for saving blance
+        document.getElementById('apply-btn').addEventListener('click', function(){
+            var mybalance = mysavingsBalance(myincome);
+            var myremabalance = RemainingBalance(myBalance,mybalance);
+
+        })
+    
+
+        
+
+    });
+
+
+
+    
