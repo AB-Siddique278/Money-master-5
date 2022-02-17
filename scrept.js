@@ -5,13 +5,15 @@ function myIncome(){
     const MyincomeAmount = MyincomeInput.value;
 
     return parseFloat(MyincomeAmount);
+
+   
 }
 
 //Expenses function
 function expenses(){
 
     // if (foodAmount < 0){
-    //     window.alert("Hello world!");
+    //     alert("Hello world!");
         
     // }
 
@@ -70,6 +72,11 @@ function expenses(){
         let myincome= myIncome();
         let myexprenses= expenses();
         let myBalance = mybalance(myincome,myexprenses);
+        let myerror = errorM1();
+        let myerror1 = errorM2();
+        let myerror2 = errorM3();
+        let myerror3 = errorM4();
+        
 
 
         //call function for saving blance
@@ -77,13 +84,12 @@ function expenses(){
             var mybalance = mysavingsBalance(myincome);
             var myremabalance = RemainingBalance(myBalance,mybalance);
 
+            
+
         })
     
 
-        
-
     });
-
 
 
     

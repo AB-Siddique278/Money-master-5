@@ -30,23 +30,30 @@
                 <h5 class="text-center mt-2">Income</h5>
                 <div class="container">
 
-                    <form class="row g-3 ">
-                        <div>
-                            <label for="inputEmail3" class="col-sm-2 ">Income:</label>
-                            <input type="text" class="p-2 mt-3 " id="income-input" placeholder="Enter"/>
-                        </div>
-                        <h5 class="text-center mt-3">Expenses</h5>
-                        <div>
-                            <label for="inputEmail3" class="col-sm-2 ">Food:</label>
-                            <input type="text" class="p-2 mt-3 " id="foodcost-input" placeholder="Enter"/>
-                        </div>
-                        <div>
-                            <label for="inputEmail3" class="col-sm-2 ">Rent</label>
-                            <input type="text" class="p-2 mt-3 " id="rentcost-input" placeholder="Enter"/>
-                        </div>
-                        <div>
-                            <label for="inputEmail3" class="col-sm-2 ">Clothes:</label>
-                            <input type="text" class="p-2 mt-3 " id="clothcost-input" placeholder="Enter"/>
+                    <form class="row g-3">
+                        <div >
+
+
+                                                <!-- form section -->
+
+                            <div >                  
+                                <label for="inputEmail3" class="col-sm-2 ">Income:</label>
+                                <input type="text" class="p-2 mt-3 " id="income-input" placeholder="Enter your Income"/> <br> <span id="error1"></span>
+                                
+                            </div>
+                            <h5 class="text-center mt-3">Expenses</h5>
+                            <div>
+                                <label for="inputEmail3" class="col-sm-2 ">Food:</label>
+                                <input type="text" class="p-2 mt-3 " id="foodcost-input" placeholder="Enter your Food cost"/> <br> <span id="error2"></span>
+                            </div>
+                            <div>
+                                <label for="inputEmail3" class="col-sm-2 ">Rent:</label>
+                                <input type="text" class="p-2 mt-3 " id="rentcost-input" placeholder="Enter your rent cost"/> <br> <span id="error3"></span>
+                            </div>
+                            <div>
+                                <label for="inputEmail3" class="col-sm-2 ">Clothes:</label>
+                                <input type="text" class="p-2 mt-3 " id="clothcost-input" placeholder="Enter your clothes cost"/> <br> <span id="error4"></span>
+                            </div>
                         </div>
                     </form>
                     <div class="d-flex justify-content-center">
@@ -71,9 +78,10 @@
 
                     <div>
                         <label for="inputEmail3" class="col-sm-2 ">Save:</label>
-                        <input type="text" class="p-2" id="save-input" placeholder="Enter "/> <span class="fw-bold">%</span>
+                        <input type="text" class="p-2" id="save-input" placeholder="Enter for savings"/> <span class="fw-bold">%</span>
                         
                         <button class="btn btn-primary py-2 px-3" id="apply-btn">Apply</button>
+                        <span id="error5"></span>
 
                     </div>
 
@@ -115,5 +123,6 @@
 
     <!-- Javascriptlink  -->
  <script src="scrept.js"> </script>
+ <script src="app.js"> </script>
 </body>
 </html>
